@@ -140,10 +140,10 @@ install_v2ray(){
     rm -f config.json
     wget https://raw.githubusercontent.com/atrandys/v2ray-ws-tls/master/config.json
     # v2uuid=$(cat /proc/sys/kernel/random/uuid)
-    v2uuid="001d857e-1be1-4d27-82b3-f9745a3c60f2"
+    v2uuid='001d857e-1be1-4d27-82b3-f9745a3c60f2'
     sed -i "s/aaaa/$v2uuid/;" config.json
     # newpath=$(cat /dev/urandom | head -1 | md5sum | head -c 4)
-    newpath="90df"
+    newpath='90df'
     sed -i "s/mypath/$newpath/;" config.json
     sed -i "s/mypath/$newpath/;" /etc/nginx/conf.d/default.conf
     cd /etc/nginx/html
